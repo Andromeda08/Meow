@@ -95,7 +95,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className='project hover:border-mocha-pink'>
-            <Link href="https://opv.tsukiakari.studio" target="_blank">
+            <Link href="https://osu.tsukiakari.hu" target="_blank">
               <h3>osu!pv</h3>
             </Link>
             <div className='description'>
