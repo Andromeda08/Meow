@@ -4,7 +4,7 @@ import Avatar from '../components/Avatar';
 
 const Header: React.FC = () => (
   <header className='header'>
-    <Avatar avatar='avatar.jpg' overlay='yflower.png' />
+    <Avatar avatar='avatar.jpg' overlay='yflowers.png' />
     <div className='about'>
       <h2 className='name'>hi, I'm <span className='text-mocha-peach font-medium'>Balázs Kovács</span>.</h2>
       <p className='max-w-sm text-mocha-subtext0'>I'm a computer engineering student from Hungary with an interest in computer graphics and web development.</p>
