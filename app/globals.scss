@@ -39,7 +39,7 @@ body {
 }
 
 .header {
-    @apply flex flex-col md:flex-row items-center gap-4;
+    @apply flex flex-col md:flex-row items-center gap-6;
 
     .about {
         @apply flex flex-col items-center md:items-start;
@@ -50,8 +50,8 @@ body {
     }
 }
 
-$avatar-icon-size: 120px;
-$avatar-overlay-size: 144px;
+$avatar-icon-size: calc(120px * 1.15);
+$avatar-overlay-size: calc(144px * 1.15);
 $avatar-overlay-offset: calc(($avatar-icon-size - $avatar-overlay-size) / 2);
 $avatar-border-glow: theme('colors.mocha.peach');
 
@@ -132,4 +132,49 @@ h2 {
 
 .label {
     @apply w-fit py-[2px] px-[5px] bg-mocha-surface0 border-mocha-surface0 border rounded-lg text-xs font-medium;
+}
+
+.stardust {
+    @apply w-full p-3;
+    @apply bg-mocha-mantle border border-mocha-mantle rounded-xl;
+    @apply transition-all;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 0.5rem;
+
+    h3 {
+        @apply text-xl font-medium transition-colors;
+        @apply hover:text-mocha-lavender;
+        @apply hover:underline-offset-2 hover:underline;
+    }
+    .description {
+        @apply text-sm text-mocha-subtext0 flex flex-col gap-1.5;
+    }
+    .labels {
+        @apply flex gap-2;
+    }
+
+    &:hover {
+        transform: translateY(-4px) scale(1.025);
+    }
+}
+
+.text-color-cycle {
+    animation: textGradient 15s ease-in-out 0s infinite;
+}
+
+@keyframes textGradient {
+    0%   { color: theme('colors.mocha.mauve'); }
+    10%  { color: theme('colors.mocha.pink'); }
+    20%  { color: theme('colors.mocha.red'); }
+    30%  { color: theme('colors.mocha.maroon'); }
+    40%  { color: theme('colors.mocha.peach'); }
+    50%  { color: theme('colors.mocha.yellow'); }
+    60%  { color: theme('colors.mocha.green'); }
+    70%  { color: theme('colors.mocha.teal'); }
+    80%  { color: theme('colors.mocha.sapphire'); }
+    90%  { color: theme('colors.mocha.blue'); }
+    95%  { color: theme('colors.mocha.lavender'); }
+    100% { color: theme('colors.mocha.mauve'); }
 }
